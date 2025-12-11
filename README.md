@@ -1,8 +1,10 @@
 # Visual Search with Cohere Embed v4 in Microsoft Foundry
 
-Welcome to **visual search with cohere embed 4 **!  
+Welcome to **visual search with cohere embed 4**!  
 
 This project enables advanced image search capabilities powered by [Cohere's Embed v4]. It provides a simple, scalable system for indexing and retrieving images using multimodal AI embeddings, making it easy to find similar or relevant images in large datasets.
+
+<img src="cohere4.jpg" width=400>
 
 ## ⭐ What makes Embed 4 stand out?
 
@@ -18,6 +20,21 @@ This project enables advanced image search capabilities powered by [Cohere's Emb
 - **Multimodal Queries:** Search with images, text, or mixed-input queries.
 - **Efficient Indexing:** Utilizes vector databases (e.g., FAISS, Pinecone) for scalable and fast retrieval.
 - **Easy Integration:** RESTful API and Python interfaces for seamless use in your apps or data workflows.
+
+
+## Demos screenshots
+
+### Visual search using text
+<img src="results1.jpg">
+
+### Visual search using a reference image
+<img src="results2.jpg">
+
+### Webapp for visual search using text
+<img src="gradio1.jpg">
+
+### Webapp for visual search using a reference image
+<img src="gradio2.jpg">
 
 ## 🖼️ Example Use Cases
 
