@@ -29,3 +29,18 @@ This project enables advanced image search capabilities powered by [Cohere's Emb
 ## Documentation
 - https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/unlock-multi-modal-embed-4-and-multilingual-agentic-rag-with-command-a-on-azure/4404458
 - https://ai.azure.com/explore/models/embed-v-4-0/version/1/registry/azureml-cohere?tid=16b3c013-d300-468d-ac64-7eda0820b6d3
+
+## 👤 Author
+
+**Serge Retkowsky**
+| Platform | Link |
+|----------|------|
+| GitHub | https://github.com/retkowsky |
+| LinkedIn | https://www.linkedin.com/in/serger/ |
+| YouTube | https://www.youtube.com/@serge1840/videos |
+| Medium | https://medium.com/@sergems18 |
+| Role | AI & APPS Global Black Belt @ Microsoft France | |
+
+**Last Updated**: 11-December-2025
+
+For questions, issues, or feedback, please open an issue in this repository or contact through the channels above.
