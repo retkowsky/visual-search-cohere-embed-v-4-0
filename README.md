@@ -25,16 +25,16 @@ This project enables advanced image search capabilities powered by [Cohere's Emb
 ## Demos screenshots
 
 ### Visual search using text
-<img src="results1.jpg">
+<img src="img/results1.jpg">
 
 ### Visual search using a reference image
-<img src="results2.jpg">
+<img src="img/results2.jpg">
 
 ### Webapp for visual search using text
-<img src="gradio1.jpg">
+<img src="img/gradio1.jpg">
 
 ### Webapp for visual search using a reference image
-<img src="gradio2.jpg">
+<img src="img/gradio2.jpg">
 
 ## 🖼️ Example Use Cases
 
