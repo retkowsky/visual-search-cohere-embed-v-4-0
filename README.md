@@ -4,7 +4,7 @@ Welcome to **visual search with cohere embed 4**!
 
 This project enables advanced image search capabilities powered by [Cohere's Embed v4]. It provides a simple, scalable system for indexing and retrieving images using multimodal AI embeddings, making it easy to find similar or relevant images in large datasets.
 
-<img src="cohere4.jpg" width=400>
+<img src="img/cohere4.jpg" width=400>
 
 ## ⭐ What makes Embed 4 stand out?
 
