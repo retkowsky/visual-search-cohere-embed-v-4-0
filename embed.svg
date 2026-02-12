@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 820" font-family="Segoe UI, Arial, sans-serif">
+  <!-- Background -->
+  <rect width="960" height="820" rx="16" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="480" y="38" text-anchor="middle" font-size="24" font-weight="bold" fill="#1a1a2e">Cohere Embed v4 — How Embeddings Work</text>
+  <text x="480" y="62" text-anchor="middle" font-size="13" fill="#6c757d">Multimodal embedding model · Text + Images → Vectors · 128K context · Matryoshka dimensions</text>
+
+  <!-- ============================================ -->
+  <!-- SECTION 1: INPUT TYPES -->
+  <!-- ============================================ -->
+  <text x="40" y="105" font-size="16" font-weight="bold" fill="#1a1a2e">① Inputs</text>
+
+  <!-- Text input box -->
+  <rect x="40" y="120" width="180" height="80" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="130" y="148" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e40af">📝 Text</text>
+  <text x="130" y="168" text-anchor="middle" font-size="11" fill="#1e40af">"Azure AI is great"</text>
+  <text x="130" y="185" text-anchor="middle" font-size="10" fill="#3b82f6">up to 128K tokens</text>
+
+  <!-- Image input box -->
+  <rect x="240" y="120" width="180" height="80" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="330" y="148" text-anchor="middle" font-size="13" font-weight="bold" fill="#9d174d">🖼️ Image</text>
+  <text x="330" y="168" text-anchor="middle" font-size="11" fill="#9d174d">PNG / JPEG / WebP</text>
+  <text x="330" y="185" text-anchor="middle" font-size="10" fill="#db2777">max ~2M pixels</text>
+
+  <!-- Mixed input box -->
+  <rect x="440" y="120" width="180" height="80" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="530" y="148" text-anchor="middle" font-size="13" font-weight="bold" fill="#5b21b6">📄 Mixed</text>
+  <text x="530" y="168" text-anchor="middle" font-size="11" fill="#5b21b6">Text + Images (PDFs)</text>
+  <text x="530" y="185" text-anchor="middle" font-size="10" fill="#7c3aed">interleaved content</text>
+
+  <!-- input_type box -->
+  <rect x="660" y="120" width="260" height="80" rx="10" fill="#fefce8" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="790" y="145" text-anchor="middle" font-size="12" font-weight="bold" fill="#854d0e">input_type parameter</text>
+  <text x="790" y="165" text-anchor="middle" font-size="11" fill="#854d0e" font-family="monospace">search_document → indexing</text>
+  <text x="790" y="182" text-anchor="middle" font-size="11" fill="#854d0e" font-family="monospace">search_query   → retrieval</text>
+
+  <!-- Arrows from inputs to model -->
+  <line x1="130" y1="200" x2="130" y2="240" stroke="#2563eb" stroke-width="2" marker-end="url(#arrowGray)"/>
+  <line x1="330" y1="200" x2="330" y2="240" stroke="#db2777" stroke-width="2" marker-end="url(#arrowGray)"/>
+  <line x1="530" y1="200" x2="530" y2="240" stroke="#7c3aed" stroke-width="2" marker-end="url(#arrowGray)"/>
+
+  <!-- ============================================ -->
+  <!-- SECTION 2: MODEL -->
+  <!-- ============================================ -->
+  <text x="40" y="260" font-size="16" font-weight="bold" fill="#1a1a2e">② Model</text>
+
+  <rect x="80" y="245" width="520" height="55" rx="14" fill="#1a1a2e"/>
+  <text x="340" y="270" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Cohere Embed v4</text>
+  <text x="340" y="290" text-anchor="middle" font-size="11" fill="#a5b4fc">Multimodal Transformer · Unified vector space for text &amp; images</text>
+
+  <!-- Arrow from model to output -->
+  <line x1="340" y1="300" x2="340" y2="340" stroke="#1a1a2e" stroke-width="2" marker-end="url(#arrowGray)"/>
+
+  <!-- ============================================ -->
+  <!-- SECTION 3: OUTPUT VECTOR -->
+  <!-- ============================================ -->
+  <text x="40" y="365" font-size="16" font-weight="bold" fill="#1a1a2e">③ Output: Embedding Vector</text>
+
+  <!-- Vector visualization -->
+  <rect x="40" y="380" width="880" height="70" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
+  
+  <!-- Vector cells -->
+  <rect x="55" y="395" width="52" height="40" rx="5" fill="#d1fae5"/>
+  <text x="81" y="420" text-anchor="middle" font-size="11" font-family="monospace" fill="#065f46">0.013</text>
+
+  <rect x="115" y="395" width="52" height="40" rx="5" fill="#d1fae5"/>
+  <text x="141" y="420" text-anchor="middle" font-size="11" font-family="monospace" fill="#065f46">-0.027</text>
+
+  <rect x="175" y="395" width="52" height="40" rx="5" fill="#d1fae5"/>
+  <text x="201" y="420" text-anchor="middle" font-size="11" font-family="monospace" fill="#065f46">0.089</text>
+
+  <rect x="235" y="395" width="52" height="40" rx="5" fill="#d1fae5"/>
+  <text x="261" y="420" text-anchor="middle" font-size="11" font-family="monospace" fill="#065f46">-0.041</text>
+
+  <rect x="295" y="395" width="52" height="40" rx="5" fill="#d1fae5"/>
+  <text x="321" y="420" text-anchor="middle" font-size="11" font-family="monospace" fill="#065f46">0.056</text>
+
+  <rect x="355" y="395" width="52" height="40" rx="5" fill="#d1fae5"/>
+  <text x="381" y="420" text-anchor="middle" font-size="11" font-family="monospace" fill="#065f46">0.003</text>
+
+  <rect x="415" y="395" width="52" height="40" rx="5" fill="#d1fae5"/>
+  <text x="441" y="420" text-anchor="middle" font-size="11" font-family="monospace" fill="#065f46">-0.071</text>
+
+  <text x="490" y="420" text-anchor="middle" font-size="18" fill="#065f46">· · ·</text>
+
+  <rect x="520" y="395" width="52" height="40" rx="5" fill="#d1fae5"/>
+  <text x="546" y="420" text-anchor="middle" font-size="11" font-family="monospace" fill="#065f46">0.019</text>
+
+  <!-- Dimension label -->
+  <text x="620" y="410" font-size="12" fill="#065f46" font-weight="bold">← 1536 float values (default)</text>
+  <text x="620" y="428" font-size="11" fill="#065f46">Each number captures a semantic feature</text>
+
+  <!-- ============================================ -->
+  <!-- SECTION 4: MATRYOSHKA DIMENSIONS -->
+  <!-- ============================================ -->
+  <text x="40" y="490" font-size="16" font-weight="bold" fill="#1a1a2e">④ Matryoshka Dimensions</text>
+  <text x="295" y="490" font-size="12" fill="#6c757d">(choose precision vs. speed)</text>
+
+  <!-- Nested rectangles showing matryoshka -->
+  <rect x="40" y="505" width="680" height="50" rx="10" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="730" y="535" font-size="13" font-weight="bold" fill="#0ea5e9">1536 dims</text>
+  <text x="730" y="550" font-size="10" fill="#0ea5e9">max precision</text>
+
+  <rect x="50" y="510" width="510" height="40" rx="8" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="570" y="535" font-size="12" font-weight="bold" fill="#8b5cf6">1024 dims</text>
+
+  <rect x="60" y="515" width="340" height="30" rx="6" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="410" y="535" font-size="12" font-weight="bold" fill="#f59e0b">512 dims</text>
+
+  <rect x="70" y="520" width="170" height="20" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="155" y="535" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400e">256 dims</text>
+  <text x="155" y="575" text-anchor="middle" font-size="10" fill="#92400e">fastest / smallest</text>
+
+  <!-- ============================================ -->
+  <!-- SECTION 5: COMPRESSION TYPES -->
+  <!-- ============================================ -->
+  <text x="40" y="615" font-size="16" font-weight="bold" fill="#1a1a2e">⑤ Embedding Types (Compression)</text>
+
+  <!-- float -->
+  <rect x="40" y="630" width="155" height="55" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="117" y="653" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">float</text>
+  <text x="117" y="672" text-anchor="middle" font-size="10" fill="#2563eb">32-bit · highest quality</text>
+
+  <!-- int8 -->
+  <rect x="210" y="630" width="155" height="55" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="287" y="653" text-anchor="middle" font-size="12" font-weight="bold" fill="#166534">int8</text>
+  <text x="287" y="672" text-anchor="middle" font-size="10" fill="#16a34a">8-bit · 4x smaller</text>
+
+  <!-- uint8 -->
+  <rect x="380" y="630" width="155" height="55" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="457" y="653" text-anchor="middle" font-size="12" font-weight="bold" fill="#854d0e">uint8</text>
+  <text x="457" y="672" text-anchor="middle" font-size="10" fill="#ca8a04">8-bit unsigned</text>
+
+  <!-- binary -->
+  <rect x="550" y="630" width="155" height="55" rx="8" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="627" y="653" text-anchor="middle" font-size="12" font-weight="bold" fill="#9d174d">binary</text>
+  <text x="627" y="672" text-anchor="middle" font-size="10" fill="#db2777">1-bit · 32x smaller</text>
+
+  <!-- ubinary -->
+  <rect x="720" y="630" width="155" height="55" rx="8" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="797" y="653" text-anchor="middle" font-size="12" font-weight="bold" fill="#5b21b6">ubinary</text>
+  <text x="797" y="672" text-anchor="middle" font-size="10" fill="#7c3aed">1-bit unsigned</text>
+
+  <!-- ============================================ -->
+  <!-- SECTION 6: USE CASES -->
+  <!-- ============================================ -->
+  <text x="40" y="730" font-size="16" font-weight="bold" fill="#1a1a2e">⑥ What You Can Do</text>
+
+  <rect x="40" y="745" width="200" height="50" rx="10" fill="#1a1a2e"/>
+  <text x="140" y="766" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="bold">🔍 Semantic Search</text>
+  <text x="140" y="783" text-anchor="middle" font-size="10" fill="#a5b4fc">text → find similar text</text>
+
+  <rect x="260" y="745" width="200" height="50" rx="10" fill="#1a1a2e"/>
+  <text x="360" y="766" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="bold">🖼️ Visual Search</text>
+  <text x="360" y="783" text-anchor="middle" font-size="10" fill="#a5b4fc">text → find images</text>
+
+  <rect x="480" y="745" width="200" height="50" rx="10" fill="#1a1a2e"/>
+  <text x="580" y="766" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="bold">📄 PDF Retrieval</text>
+  <text x="580" y="783" text-anchor="middle" font-size="10" fill="#a5b4fc">query → find PDF pages</text>
+
+  <rect x="700" y="745" width="200" height="50" rx="10" fill="#1a1a2e"/>
+  <text x="800" y="766" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="bold">🏷️ Classification</text>
+  <text x="800" y="783" text-anchor="middle" font-size="10" fill="#a5b4fc">cluster &amp; categorize</text>
+
+  <!-- Footer -->
+  <text x="480" y="815" text-anchor="middle" font-size="11" fill="#9ca3af">All inputs are projected into a unified vector space — text and images are directly comparable via cosine similarity</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowGray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/>
+    </marker>
+  </defs>
+</svg>
